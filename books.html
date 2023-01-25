@@ -3,7 +3,15 @@
     <title> All about books! </title>
   </head>
   <body>
-   
+   <nav>
+       <li class="navli"> <a href="https://www.sandiego.gov/public-library"> Library </a></li>
+       <li class="navli"> <a href="#LOWER"> Lower </a></li>
+       <li class="navli"> <a href="index.html"> Home </a></li>
+
+     </nav>
+        <h1 id = "TOP"> </h1>
+    <br>
+    <br>
     <center>
       <ul>
      <li> <a href="index.html"> BACK </a> </li>
@@ -32,7 +40,7 @@
   <tr>
     <td>Realistic Fiction</td>
     <td>Realistic fiction is about things that didn't actually happen, but that take place in a setting similar to real life and could have happened. More specifically, it takes place in the same time period that the book was written.</td>
-    <td><img src="https://us.123rf.com/450wm/rrraven/rrraven1710/rrraven171000038/rrraven171000038.jpg?ver=6" height = 100></td>
+    <td><img src="RealisticFiction.png" height = 100></td>
   </tr>
   <tr>
     <td>Historical Fiction</td>
@@ -44,6 +52,7 @@
     <td> Sci-Fi, or Science fiction, is a story that usually takes place in a futuristic time period where the science and technologies are much more advanced than at the time that it was written. </td>
     <td> <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9GUWKpaEr5B6WDoRrprE3cPMEaEtgiH_6vg:https://preview.redd.it/akuasegla1s71.jpg%3Fwidth%3D528%26format%3Dpjpg%26auto%3Dwebp%26s%3D3d49763b38394f526f3c3c87e5390feb8cb6a891&usqp=CAU" height = 100> </td>
 </table>
+            <h1 id="LOWER"> </h1>
       <p> Some of my favorite examples of each of these genres are: </p>
       <ul style="list-style-type:square">
         <li> <i> The Chronicles of Prydain </i> by Lloyd Alexander (a book series, fantasy) </li>
@@ -54,14 +63,7 @@
         
 
 </ul>
-      <ol type="A">
-        <li> this </li>
-        <li> is </li>
-        <li> a </li>
-        <li> useless </li>
-        <li> ordered </li>
-        <li> list </li>
-      </ol>
+      <h1> <a href="#TOP"> Back to top </a></h1>
 
       
   </body>
@@ -106,6 +108,31 @@ tr:hover {
 body {
   background-color: #4a3703;
    color: white;
+}
+    nav{
+  right: 0;
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  position: fixed;
+  overflow: hidden;
+  background-color: #bf0a0a;
+}
+.navli {
+  float: right;
+  background-color: #bf0a0a;
+  display: inline;
+}
+.navli a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.navli a:hover {
+  background-color: #a10a0a;
 }
 
   </style>
