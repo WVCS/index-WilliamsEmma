@@ -11,7 +11,68 @@
   <br>
   <br>
   <center>
+    
+    <div class="wrapper">
+<div class="A">
   <h1> Delicious Desserts! </h1>
+  
+</div>
+<div class="B"> <h4>Need to satisfy your sweet tooth? Looking for high quality, delicious baked goods, still warm from the oven? Come to Delicious Desserts today! </h4></div>
+<div class="C"> <img src="https://www.dawnfoods.com/images/default-source/ameap/bakery-ingredients/american-mixes/cookie-mix-header-new.tmb-banner.jpg?sfvrsn=d8eb639f_1" height=375></div>
+<div class="D">We're located at: 
+  <br>12345 Yummy Avenue, Foodtopia. 
+  <br>
+  <br>GPS coordinates: 32.957338, -117.835581 </div>
+<div class="E"> Check us out at:
+  <br>
+      <br> Twitter: @deliciousDesserts
+      <br> Instagram: @dessertsRdelicious
+      <br> Facebook: @DeliciousDesserts
+      <br> MySpace: @DeliciousDesserts
+      <br> Tag us on tiktok: #delishDessert
+        
+      </div>
+<div class="F"> Our Short and Sweet Menu:
+      <table>
+        <tr>
+          <th> Cookie </th>
+          <th> Individual price </th>
+          <th> Dozen price </th>
+        </tr>
+        <tr>
+          <td> Chocolate Chip </td>
+          <td> $3 </td>
+          <td> $30 </td>
+        </tr>
+        <tr>
+          <td> Snickerdoodle </td>
+          <td> $3 </td>
+          <td> $30 </td>
+        </tr>
+        <tr>
+          <td> Chocolate Fudge </td>
+          <td> $4 </td>
+          <td> $40 </td>
+        </tr>
+        <tr>
+          <td> White Macadamia Nut </td>
+          <td> $3 </td>
+          <td> $30 </td>
+        </tr>
+        <tr>
+          <td> Oatmeal Raisin </td> <!-- No one likes Oatmeal Raisin best anyway, gotta be extra cheap -->
+          <td> $2.50 </td>
+          <td> $25 </td>
+        </tr>
+        <tr>
+          <td> Brownie </td>
+          <td> $5 </td>
+          <td> $40 </td>
+        </tr>
+  </table>
+      </div>
+  
+</div>
   
   </body>
 
@@ -19,7 +80,7 @@
 </html>
   
   <style>
- nav{
+nav{
   right: 0;
   top: 0;
   width: 100%;
@@ -47,5 +108,60 @@
 body{
   background-color: #f4ebd9;
     }
+
+.wrapper {
+  display: grid;
+  height: 95vh;
+  grid-template: 
+      "A B C" auto
+      "D E F";
+    grid-template-columns: 20% 60% 20%; /*this is why the middle column is so much fatter than the first and last one and why there's only three columns*/
+  grid-row-gap: 5px;
+  grid-column-gap: 0%;
+  border: solid #C57B57;
+}
+div {
+  border-radius: 15px;
+}
+
+.A {
+  grid-column: 1 /*this number means that it will start on row 1 (the first one) */ / 4 /* this means that it'll end on row 4. Think of it like a ruler, but it starts at 1 not 0. If it starts and ends on the same number, it shouldn't exist at all, but instead it it one wide*/;
+  grid-row:1/2
+}
+.B{
+  color: #0F5257;
+  margin-left: 5%;
+  grid-row:2/3;
+}
+.C{
+  grid-row:2/4;
+  grid-column:2/2;
+}
+.D{
+  grid-row:2/3;
+}
+.E {
+  grid-row: 3/4;
+  grid-column-start: 1;
+
+}
+.F {
+  grid-area: 3 / 3 / 5 / 3;
+  margin-bottom:11%;
+  margin-top: -5%;
+}
+ul{
+  list-style-position:inside;
+}
+table, td, th {
+  border: 1px solid black;
+  text-align:center;
+}
+table {
+  border-collapse: collapse;
+  width: 75%;
+  margin-left: 13%; 
+  margin-right:auto;
+}
     
   </style>
