@@ -1,1 +1,176 @@
+<html>
+  <head>
+  <title> Birthday Event Site </title>
+  <link rel="icon" type="image/x-icon" href="Put the link here">
+</head>
+<body>
+   <nav>
+       <li class="navli"> <a href="../index.html"> Home </a></li>
 
+     </nav>
+  <br>
+  <center>
+  <h1> You're invited...</h1>
+    <h2> To my 18th birthday party!</h2>
+    <div class= "wrapper">
+      <div class="where"> The beach!
+        <br>
+        We'll be celebrating at La Jolla Shores.
+        <br>
+        Address: 
+        San Diego, CA 92037
+      </div>
+      <div class="about"> I will be hosting a beach party to celebrate my 18th birthday. This is the schedule:<br>
+        <br>
+        11am-11:15: Arrival and meet up with each other<br>
+        11:15-12:00: Walk down to Gerard's and buy lunch (I will pay)<br>
+        12:00-12:45: Set up beach chairs and eat lunch <br>
+        12:14-2:00: Continue to hang out and chat, open gifts, etc.<br>
+        2:00: The party ends, head home.<br>
+        <br>
+        If you need a ride, whether there, back, or both, let me know and I can help.<br>
+        <br>
+        Please RVSP at myemail@internet.com and if you need to contact me for any reason, email me on that account too. I hope to see you there!
+ 
+      </div>
+      <div class="when"> This will take place on
+        <br>
+        November 28, 2022
+        from 11am-2pm.
+      </div>
+      <div class="bring"> Please bring gifts!
+        <br>
+        Gifts of around $20 per person are expected.
+      </div>
+      <div class="attire"> Wear clothing suited for cool weather as it will likely be windy, as well as sunglasses for the sun. And don't forget sunscreen!
+      </div>
+ 
+      
+    </div>
+</body>
+</html>
+  
+<style>
+  body{
+  background-image: url("https://t4.ftcdn.net/jpg/04/20/09/31/360_F_420093156_dEpP6CgbzpAsZZNdpFigl7szRqMY861b.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #41521f;
+
+}
+h1{
+    font-size: 8vh;
+}
+h2{
+  font-size: 5vh;
+}
+.wrapper{
+  width: 95vw;
+  align-items: center;
+  justify-content: space-evenly;
+  display: grid;
+  height: 60vh;
+  grid-template: 
+      "A B C" auto
+      "D E";
+    grid-template-columns: 15% 60% 15%; /*this is why the middle column is so much fatter than the first and last one and why there's only three columns*/
+  grid-row-gap: 1%;
+  grid-column-gap: 5%;
+  border: none;
+  background: rgba(0, 0, 0, 0)
+}
+div {
+  background-color: antiquewhite;
+  border: dashed 1px gray;
+  border-radius: 15px;
+}
+.about{
+  grid-row: 1/3;
+  grid-column: 2/3;
+  height: 50vh;
+  background-color: #F5FDC6;
+  padding: 7vh;
+}
+.attire{
+  grid-column-start: 3;
+  height: fit-content;
+  background-color: #F5FDC6;
+  padding: 4vh;
+}
+.where{
+  height: fit-content;
+  background-color: #F5FDC6;
+  padding: 4vh;
+}
+.when{
+  height: fit-content;
+  background-color: #F5FDC6;
+  padding:4vh;
+}
+.bring{
+  height: fit-content;
+  background-color: #F5FDC6;
+  padding: 4vh;
+}
+nav{
+  right: 0;
+  top: 0;
+  width: 100%;
+  height:10pxvh;
+  list-style-type: none;
+  margin: 0px;
+  position: fixed;
+  overflow: hidden;
+  background-color: #f5c396;
+}
+.navli {
+  float: right;
+  background-color: #f5c396;
+  display: inline;
+}
+.navli a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #41521f;
+}
+@media only screen and (max-width: 1024px){
+  .wrapper{
+    grid-template: 
+      "A B" auto
+      "C D"
+      "E F"
+      "G H";
+    grid-template-columns: 70vw 20wv;
+  }
+  .where{
+    grid-row:1/2;
+    grid-column:2/3;
+  }
+  .about{
+    grid-row: 1/5;
+    grid-column:1/2;
+    height: fit-content;
+    padding:4vh;
+  }
+  .when{
+    grid-row:2/3;
+    grid-column: 2/3;
+    height:fit-content;
+    
+  }
+  .bring{
+    grid-row:3/4;
+    grid-column:2/3;
+    height:fit-content;
+    padding: 4vh;
+  }
+  .attire{
+    grid-row:4/5;
+    grid-column:2/3;
+    height:fit-content;
+  }
+
+}
+</style>
