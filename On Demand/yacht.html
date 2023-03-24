@@ -11,29 +11,31 @@
     <br>
     <center>
     <h1> Westview Yacht Rental </h1> <!-- I don't see a name for this service so I'm just making one up-->
-      <!-- Slideshow code until line 77 -->
+      
+      
+      <!-- Slideshow code start -->
       <!-- Container for the image gallery -->
 <div class="container">
 
   <!-- Full-width images with number text -->
   <div class="mySlides">
     <div class="numbertext">1 / 4</div>
-      <img src="https://cdn.boatinternational.com/listing/2022/04/ca082840-c476-11ec-b41f-dfd25b97bfcb-HOSPITALITY_superyacht_for_sale_charter_01.jpg" >
+      <img class="display" src="https://cdn.boatinternational.com/listing/2022/04/ca082840-c476-11ec-b41f-dfd25b97bfcb-HOSPITALITY_superyacht_for_sale_charter_01.jpg" >
   </div>
 
   <div class="mySlides">
     <div class="numbertext">2 / 4</div>
-      <img src="https://i5.walmartimages.com/asr/5cfb65ef-6ee8-43fc-aed2-8b597a262cea_1.d24a8e0f09f0450c2311f91b2556a5f7.jpeg" >
+      <img class="display" src="https://i5.walmartimages.com/asr/5cfb65ef-6ee8-43fc-aed2-8b597a262cea_1.d24a8e0f09f0450c2311f91b2556a5f7.jpeg" >
   </div>
 
   <div class="mySlides">
     <div class="numbertext">3 / 4</div>
-      <img src="https://assets3.thrillist.com/v1/image/3131934/1200x600/scale;">
+      <img class="display" src="https://assets3.thrillist.com/v1/image/3131934/1200x600/scale;">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">4 / 4</div>
-      <img src="https://iycstorage.s3.amazonaws.com/import/wordpress/2015/09/Yacht_Impromptu_Superyacht_charter_profile.jpg">
+      <img class="display" src="https://iycstorage.s3.amazonaws.com/import/wordpress/2015/09/Yacht_Impromptu_Superyacht_charter_profile.jpg">
   </div>
 
 
@@ -120,7 +122,7 @@ body{
 h1{
   font-size: 75px;
 }
-/* Slideshow code until line 119*/
+/* Slideshow code start*/
 * {
   box-sizing: border-box;
 }
@@ -207,7 +209,7 @@ h1{
   width: 70%;
   height: 100%;
 }
-img{
+.display{
   height: 100vh;
 }
 
@@ -266,5 +268,4 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
-//end of slideshow code
 </script>
