@@ -1,0 +1,73 @@
+<html>
+<head>
+  <title> Owen Barfield </title>
+  <link rel="icon" type="image/x-icon" href="https://www.radixmagazine.com/wp-content/uploads/2021/11/Owen-Barfield.jpg">
+</head>
+<body>
+  <nav>
+       <li class="navli"> <a href="Group Site.html"> Back </a></li>
+     </nav>
+  <center>
+    <br>
+    <br>
+    <img src="https://www.owenbarfield.org/wordpress/wp-content/uploads/2021/04/homepage-featured.jpg" height= 150vh>
+  <h1> Owen Barfield </h1>
+    <div class="text">
+    <p> Arthur Owen Barfield was a British philosopher, author, poet, and critic. He was born on November 9, 1989, and died on December 14, 1997.<br> <br>
+      Barfield has been known as "the first and last Inkling." He had a profound influence on C. S. Lewis and, through his books The Silver Trumpet and Poetic Diction (dedicated to Lewis), an appreciable effect on J. R. R. Tolkien. Their contribution, and their conversations, persuaded both Tolkien and Lewis that myth and metaphor have always had a central place in language and literature.
+<br>
+      <br>
+In 1923, he married the musician and choreographer Maud Douie. They had two children, Alexander and Lucy; and fostered Geoffrey. Their sole grandchild is Owen A. Barfield, son of Alexander. After the death of his wife in 1980, he spent his final years in a retirement hotel in Forest Row, East Sussex.</i></p>
+    </div>
+    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1355104450i/590158.jpg" width=20%>
+<img src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71qkjqSfaQL._AC_UF1000,1000_QL80_.jpg" width=19%>
+<img src="History Guilt and Habit Cover.png" width=20%>
+</body>
+</html>
+
+<style>
+body{
+  background-color: #E2FADB;
+  color: #5F634F;
+}
+nav{
+  right: 0;
+  top: 0;
+  width: 100%;
+  height:10pxvh;
+  list-style-type: none;
+  margin: 0px;
+  position: fixed;
+  overflow: hidden;
+  background-color: #CFEBDF;
+}
+.navli {
+  float: right;
+  background-color: #CFEBDF;
+  display: inline;
+}
+.navli a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #5F634F;
+}
+.navli a:hover{
+  background-color: #9BC4CB;
+}
+h1{
+  font-size:5vw;
+}
+.text{
+  width: 80%;
+}
+p{
+  font-size:18px;
+}
+
+@media only screen and (max-width: 1024px){
+  nav{
+    width:10%;
+  } 
+}
+</style>
