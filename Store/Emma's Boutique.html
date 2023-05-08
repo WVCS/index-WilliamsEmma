@@ -8,6 +8,18 @@
        <li class="navli"> <a href="../index.html"> Home </a></li>
    
   </nav>
+  
+  <div id="wrapper">
+  <form autocomplete="off">
+    <div class="autocomplete">
+    <input id="myInput" type="text" name="box" placeholder="Search...">
+    </div>
+  </form>
+ </div> 
+  <div id="cartainer">
+    <button id="cart"> <img src="Shopping_Cart-removebg-preview.png" height=13px> View Cart </button>
+    
+  </div>
   <div class="callout">
   <div class="callout-header">Note:</div>
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -47,13 +59,15 @@
     <div class="mySlides fade">
 <div class="container">
   <img src="https://www.insidehook.com/wp-content/uploads/2022/09/Orslow-3-2.jpeg?w=1500&resize=1500%2C1000" height=500vw;>
-</div>
-    <div class="text">Explore Outfit</div>
   </div>
+    <div class="text">Explore Outfit</div>
+      </div>
+  
     </div>
       
       
 </body>
+
 </html>
 
 <style>
@@ -160,6 +174,33 @@ nav{
   from {opacity: .4}
   to {opacity: 1}
 }
+  .autocomplete {
+  background-color: antiquewhite;
+}
+
+#myInput{
+  width:100%;
+  background-color: #ccc;
+}
+
+#wrapper{
+  position: fixed;
+  right:10%;
+}
+#cart:hover{
+  cursor:not-allowed;
+}
+#cart{
+  color: #626267;
+  background-color: #E2DE84;
+  padding: 5px;
+}
+
+#cartainer{
+  position:fixed;
+  left: 5%;
+  top: 6vh;
+}
   </style>
 
 <script>
@@ -178,5 +219,89 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
-  
+  function autocomplete(inp, arr) {
+
+  var currentFocus;
+
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+
+      this.parentNode.appendChild(a);
+
+      for (i = 0; i < arr.length; i++) {
+
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+
+          b = document.createElement("DIV");
+
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+
+          b.addEventListener("click", function(e) {
+
+              inp.value = this.getElementsByTagName("input")[0].value;
+
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        currentFocus++;
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        currentFocus--;
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        e.preventDefault();
+        if (currentFocus > -1) {
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    if (!x) return false;
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+var autoAnswers = ["Pants", "Shirts", "Shoes", "Tailoring", "Deals", "Winter", "Fall", "Summer", "Spring", "Hats", "Accessories", "Dresses",];
+
+autocomplete(document.getElementById("myInput"), autoAnswers);
 </script>
