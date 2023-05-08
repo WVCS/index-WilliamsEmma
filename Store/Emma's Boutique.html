@@ -1,0 +1,182 @@
+<html>
+<head>
+  <title> Emma's Boutique</title>
+  <link rel="icon" type="image/x-icon" href="Store Logo.png">
+</head>
+<body>
+   <nav>
+       <li class="navli"> <a href="../index.html"> Home </a></li>
+   
+  </nav>
+  <div class="callout">
+  <div class="callout-header">Note:</div>
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <div class="callout-container">
+    <p>The store will not be open until July, 2023 so any orders until then are pre-orders. Thank you for understanding!</p>
+  </div>
+</div>
+  <center>
+  <img src="Store Logo.png" width=40%>
+  <h1> Emma's Boutique</h1>
+    <p> At Emma's Boutique, our mission is to provide clothes that are fashionable, confortable, <i>and</i> practical. Every purchase comes with a free optional tailoring service so that your clothing fits you perfectly and comfortably.</p>
+      <div class="mySlides fade">
+
+    <div class="container">
+  <img src= "https://cdn.shopify.com/s/files/1/0313/1572/2378/products/linen-maxi-dress-model-no-35-in-dark-peacock-pyne-and-smith-8_grande.jpg?v=1661993637" height=500vw>
+  </div>
+    <div class="text">Blue dress with pockets - 10% off!</div>
+  </div>
+    </div>
+  <div class="mySlides fade">
+
+    <div class="container">
+  <img src="https://cdn.shopify.com/s/files/1/0050/8402/0810/products/EP00667DG-R_f74e7de9-27bc-4953-9bb4-e221a165dedd.jpg?v=1673261688" height=500vw>
+</div>
+    <div class="text">Fancy Dress</div>
+  </div>
+    </div>
+
+  <div class="mySlides fade">
+
+    <div class="container">
+  <img src="https://i0.wp.com/withliana.com/wp-content/uploads/2021/01/Models-Off-Duty_-i-migliori-look-sfoggiati-dalle-modelle.jpeg?resize=867%2C1300&ssl=1" height=500vw>
+</div>
+    <div class="text">Casual Outfit - 15% off</div>
+  </div>
+</div>
+    <div class="mySlides fade">
+<div class="container">
+  <img src="https://www.insidehook.com/wp-content/uploads/2022/09/Orslow-3-2.jpeg?w=1500&resize=1500%2C1000" height=500vw;>
+</div>
+    <div class="text">Explore Outfit</div>
+  </div>
+    </div>
+      
+      
+</body>
+</html>
+
+<style>
+  
+ h1{
+  font-family: "papyrus", "Courier New", fantasy;
+  font-size:3vw;
+}
+body{
+  background-color:#ECFEAA;
+  color: #626267;
+}
+nav{
+  right: 0;
+  top: 0;
+  width: 100%;
+  height:10pxvh;
+  list-style-type: none;
+  margin: 0px;
+  position: fixed;
+  overflow: hidden;
+  background-color: #86836D;
+}
+.navli {
+  float: right;
+  background-color: #86836D;
+  display: inline;
+}
+.navli a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+}
+.navli a:hover{
+  background-color: #A6A670;
+}
+
+.callout-header {
+  padding: 25px 15px;
+  background: #86836D;
+  font-size: 2.5vw;
+  color: white;
+}
+
+/* Callout container/body */
+.callout-container {
+  padding: 15px;
+  background-color: #A6A670;
+  color: white;
+  font-size: 1vw
+}
+.callout {
+  position: fixed;
+  bottom: 35px;
+  right: 20px;
+  margin-left: 20px;
+  max-width: 300px;
+}
+/* Close button */
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Change color on mouse-over */
+.closebtn:hover {
+  color: lightgrey;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.text {
+  color: #E2DE84;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0px; /*this isn't working I don't think, the text is still in the middle of the picture*/
+  width: 100%;
+  text-align: center;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+  </style>
+
+<script>
+  
+  let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+  
+</script>
