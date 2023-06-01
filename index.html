@@ -1,53 +1,104 @@
 <html>
  <head>
   <title> Emma's Website </title>
-  <link rel= "stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="Reading.png">
  </head>
- <body>
-   <nav>
-    <li> <a href="books.html"> Books </a></li>
-    <li> <a href="Convince Project/booksBetter.html"> Convince </a></li>
-    <li> <a href="Food Site/DeliciousDesserts.html"> Food Site </a></li>
-    <li> <a href="Event Project/BdayParty.html"> Event Site </a> </li>
-    <li> <a href="On Demand/yacht.html"> On Demand Yacht </a> </li>
-    <li> <a href="Group Project/Group Site.html"> Group </a> </li>
-    <li> <a href="Amusement Park/Sidneyland.html"> Amusement Park </a> </li>
-    <li> <a href="Store/Emma's Boutique.html"> Store </a> </li>
-
-    </nav>
-  
+  <body>
+   <div class="dropdown">
+     <span>My Other Websites</span>
+  <div class="dropdown-content">
+  <li class=navli> <a href="Convince Project/booksBetter.html"> Convince </a></li>
+    <li class=navli> <a href="Food Site/DeliciousDesserts.html"> Food Site </a></li>
+    <li class=navli> <a href="Event Project/BdayParty.html"> Event Site </a> </li>
+    <li class=navli> <a href="On Demand/yacht.html"> On Demand Yacht </a> </li>
+    <li class=navli> <a href="Group Project/Group Site.html"> Group </a> </li>
+    <li class=navli> <a href="Amusement Park/Sidneyland.html"> Amusement Park </a> </li>
+    <li class=navli> <a href="Store/Emma's Boutique.html"> Store </a> </li>
+  </div>
+</div>
   <br>
   <br>
     <center>
-    <h1> Emma Williams' Website <h1>
-      
-      <img src= "Personal Artifact.png" height= 400>
+    <h1> Emma Williams' Website </h1>
+<div class="wrapper">
+  <div class="box">
+    <h2>In my free time, I:</h2>
+    <ul>
+      <li>I enjoy coding, and in my free time have worked oncoding a game. I also used to work at Code Ninjas, teaching kids how to code. </li>
+      <br>
+      <li> I enjoy watching things online (YouTube, Twitch streams, etc).</li>
+      <br>
+      <li> I love reading, whether I'm reading a physical book or online. </li>
+    </ul>
+    <img src = "Reading.png" height=10%>
+    </div>
+  <div class="box"> <h2> Here are some of my favorite books! </h2>
+    <br> <img src="https://img.comicfury.com/comics/80/27a72ba6d7c91b6c427bddeb33fd25402087851180.jpg" width = 20%> <img src="https://g.christianbook.com/g/slideshow/3/310560/main/310560_1_ftc_dp.jpg" width = 18.5%>
+    
+    
+    </div>
+  <div class="box"> <h2> Next year I'll be going to college! Here is where I'm going: </h2>
+  <img src="https://dhsl8p9ocex96.cloudfront.net/images/og-logo-biola-wide.png" width=80%>
+  </div>
+  <div class="box"> <h2> In college, I'll be majoring in... <br> <br> <br> <br> Drum roll please... <br> <br> <br> (psst, what else can I add so the length of this box matches the one next to it?) <br> <br> <br> You're never going to guess after reading the first bullet point in my free time box... <br> <br> <br> <br></h2> <h1> Computer Science! </h2> </div>
+  
+</div>
      </center>
      </body>
+
 
 
 </html>
 
   <style>
-   h1{
+  body{
+  background-image: url("https://www.shutterstock.com/image-photo/pastel-light-golden-trendy-festive-260nw-1388796587.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #30414B;
+  text-decoration: none;
+  text-shadow: 0 0 0;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1{
   text-align: center;
-  color: #5729F3;
-  text-shadow: 30px 10px 5px;
+  color: #71665B;
+  text-shadow: 30px 10px 15px;
+  font-family: "Lucida Handwriting", cursive;
 } 
-
-body{
-  background-color: #F5F59D;
+h2{
+    color: #30414B;
+  text-decoration: underline;
+  text-shadow: 0 0 0;
+  font-size: 20px;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
-nav{
-  list-style-type: none;
+.dropdown {
   position: fixed;
-  width: 100%;
-  background-color: #856305;
-  left: 0;
-  top: 0;
+  display: inline-block;
+  float:right;
+  padding: 1% 1.5%;
+  background-color: #A37C40;
+  font-size: 1vw;
+  right: 10px;
 }
-li{
+
+.dropdown-content {
+  right:0;
+  display: none;
+  position: absolute;
+  background-color: #A37C40;
+  min-width: fit-content;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.navli{
   display:inline;
   float:right;
   padding: 10px;
@@ -57,8 +108,31 @@ a{
   color: white;
   
 }
-li:hover {
-  background-color:gold;
+.navli:hover {
+  background-color:#96897B;
+}
+.wrapper {
+  display: grid;
+  height: 90vh;
+  grid-template: 
+      "A B" auto
+      "C D";
+    grid-template-columns: 48% 48%; /*this is why the middle column is so much fatter than the first and last one and why there's only three columns*/
+  grid-row-gap: 6%;
+  grid-column-gap: 4%;
+  border: none;
+}
+.box {
+  background-color: #DFB77C;
+  border: dashed 1px gray;
+  border-radius: 15px;
+  height: fit-content;
+}
+ul{
+  list-style-position:inside;
+}
+img{
+  padding: 2%;
 }
 
   </style>
